@@ -47,7 +47,7 @@ PREPARE_TEMPLATES :
 
 # Stellar kinematics module
 KIN :
-  METHOD : 'ppxf'
+  METHOD : 'ppxf' # Options: 'ppxf' or 'False'
   SPEC_MASK : 'specMask_KIN'
   LMIN : 4800
   LMAX : 5500
@@ -60,7 +60,7 @@ KIN :
 
 # Emission line fitting module
 GAS :
-  METHOD : 'gandalf'
+  METHOD : 'gandalf' # Options: 'gandalf' or 'False'
   LEVEL : 'BIN'
   LMIN : 4800
   LMAX : 5500
@@ -71,7 +71,7 @@ GAS :
 
 # Star formation histories module
 SFH :
-  METHOD : 'ppxf'
+  METHOD : 'ppxf' # Options 'ppxf' or 'False'
   LMIN : 4800
   LMAX : 5500
   SPEC_MASK : 'specMask_SFH'
@@ -83,7 +83,7 @@ SFH :
 
 # Line strenghts module
 LS :
-  METHOD : 'default'
+  METHOD : 'default' # Options: 'default' or 'False'
   TYPE : 'SPP'
   LS_FILE : 'lsBands.config'
   CONV_COR : 8.4
