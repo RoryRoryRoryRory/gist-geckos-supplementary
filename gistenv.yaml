@@ -12,5 +12,5 @@ dependencies:
   - multiprocess
   - pip
   - pip:
-    - pyqt6
+    - pyqt5
     - latex
