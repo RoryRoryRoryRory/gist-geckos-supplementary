@@ -10,6 +10,7 @@ dependencies:
   - scipy
   - matplotlib
   - multiprocess
+  - spectral-cube
   - pip
   - pip:
     - pyqt5
