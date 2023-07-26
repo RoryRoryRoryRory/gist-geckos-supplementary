@@ -58,18 +58,21 @@ KIN :
 
 # Emission line fitting module
 GAS :
-  METHOD : 'MAGPI_gandalf' # options are 'gandalf' or 'MAGPI_gandalf' Name of the routine in emissionLines/ (without .py) to perform the tasks. Set 'False' to turn off module. Set 'gandalf' to use the standard GIST implementation, exploiting the pyGandALF routine of Sarzi et al. (2006).
+  METHOD : 'ppxf' # options are 'ppxf', 'gandalf' or 'MAGPI_gandalf' Name of the routine in emissionLines/ (without .py) to perform the tasks. Set 'False' to turn off module. Set 'gandalf' to use the standard GIST implementation, exploiting the pyGandALF routine of Sarzi et al. (2006).
+  SPEC_MASK : 'specMask_GAS'
   LEVEL : 'BIN' # Set 'BIN' to perform the analysis bin-by-bin, 'SPAXEL' for a spaxel-by-spaxel analysis, and 'BOTH' to perform a spaxel-by-spaxel analysis that is informed by a previous bin-by-bin analysis.
   LMIN : 4750 # Rest-frame wavelength range used for the emission-line analysis [in Angst.]
   LMAX : 7100
   ERRORS : 0 # Derive errors on the emission-line analysis (0 No / 1 Yes). Note: Due to limitations in pyGandALF, this is currently not possible. We expect a new pyGandALF version to be published soon.
   REDDENING : False # Include the effect of reddening by dust in the pyGandALF fit. Put in the form 0.1,0.1 without any spaces. If you intend to use multiplicative polynomials instead, set REDDENING to 'False' and add a MDEG keyword in the GAS section to set the polynomial order. Additive polynomials cannot be used with pyGandALF.
-  MDEG : 12 # Degree of the multiplicative Legendre polynomial. Set '0' to not include any multiplicative polynomials.
+  MDEG : 8 # Degree of the multiplicative Legendre polynomial. Set '0' to not include any multiplicative polynomials.
+  Fixed : True # Fix the stellar kinematics to the results obtained with the stellar kinematics module [True / False]
+  MOM : 2 # Gas moments. Set to 2 for V and sigma. Higher orders not yet tested 
   EBmV : null # As opposed to None. De-redden the spectra for the Galactic extinction in the direction of the target previously to the analysis. Use e.g. EBmV = A_v / 3.2
-  EMI_FILE : 'emissionLines.config' # Emission line set-up file for pyGandALF. The specified path is relative to the configDir path in defaultDir. 
+  EMI_FILE : 'emissionLinesPHANGS.config' # Emission line set-up file for emline fittet. The specified path is relative to the configDir path in defaultDir. 
   LSF_TEMP : 'lsf_MILES' # Path of the file specifying the line-spread-function of the spectral templates. The specified path is relative to the configDir path in defaultDir.
   TEMPLATE_SET : 'miles' # options are 'miles' or 'IndoUS'
-  LIBRARY : 'MILES/' # options are 'MILES/', 'miles_ssp_ch', or 'IndoUS'
+  LIBRARY : 'MILES_EMLINES/' # options are 'MILES_EMLINES/' (contains asmaller subset of templates sim to that used by PHANGS) 'MILES/', 'miles_ssp_ch', or 'IndoUS'
   NORM_TEMP : 'LIGHT' # Normalise the spectral template library to obtain light- or mass-weighted results [LIGHT / MASS]
   
 # Star formation histories module
