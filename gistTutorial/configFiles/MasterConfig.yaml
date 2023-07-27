@@ -86,6 +86,7 @@ SFH :
   REGUL_ERR : 1. # Regularisation error for the regularised run of pPXF. Note: Regularisation = 1 / REGUL_ERR
   NOISE : 1. # Set a wavelength independent noise vector to be passed to pPXF. 
   FIXED : True # Fix the stellar kinematics to the results obtained with the stellar kinematics module [True / False]. If 'False', please provide an initial guess on the velocity dispersion of the systems [in km/s] by adding the parameter SIGMA. 
+  MC_PPXF : 0 # Added to add the option of running MC on the SFH module
   LSF_TEMP : 'lsf_MILES' # Path of the file specifying the line-spread-function of the spectral templates. The specified path is relative to the configDir path in defaultDir.
   TEMPLATE_SET : 'miles' # options are 'miles' or 'IndoUS (not recc.)'
   LIBRARY : 'MILES/' # options are 'MILES/', 'miles_ssp_ch/', or 'IndoUS/'
