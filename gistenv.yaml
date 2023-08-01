@@ -8,11 +8,11 @@ dependencies:
   - astropy
   - numpy
   - scipy
+  - pyqt
   - matplotlib
   - multiprocess
   - spectral-cube
   - extinction
   - pip
   - pip:
-    - pyqt5
     - latex
