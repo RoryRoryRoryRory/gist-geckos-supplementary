@@ -67,7 +67,7 @@ GAS :
   ERRORS : 0 # Derive errors on the emission-line analysis (0 No / 1 Yes). Note: Due to limitations in pyGandALF, this is currently not possible. We expect a new pyGandALF version to be published soon.
   REDDENING : False # Include the effect of reddening by dust in the pyGandALF fit. Put in the form 0.1,0.1 without any spaces. If you intend to use multiplicative polynomials instead, set REDDENING to 'False' and add a MDEG keyword in the GAS section to set the polynomial order. Additive polynomials cannot be used with pyGandALF.
   MDEG : 8 # Degree of the multiplicative Legendre polynomial. Set '0' to not include any multiplicative polynomials.
-  Fixed : True # Fix the stellar kinematics to the results obtained with the stellar kinematics module [True / False]
+  FIXED : True # Fix the stellar kinematics to the results obtained with the stellar kinematics module [True / False]
   MOM : 2 # Gas moments. Set to 2 for V and sigma. Higher orders not yet tested 
   EBmV : null # As opposed to None. De-redden the spectra for the Galactic extinction in the direction of the target previously to the analysis. Use e.g. EBmV = A_v / 3.2
   EMI_FILE : 'emissionLinesPHANGS.config' # Emission line set-up file for emline fittet. The specified path is relative to the configDir path in defaultDir. 
