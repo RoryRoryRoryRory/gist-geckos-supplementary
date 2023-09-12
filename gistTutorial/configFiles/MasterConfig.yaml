@@ -56,6 +56,7 @@ KIN :
   TEMPLATE_SET : 'miles' # options are 'miles' or 'IndoUS' or 'walcher'
   LIBRARY : 'MILES/' # options are 'MILES/', 'miles_ssp_ch/', 'IndoUS', and 'Walcher/'
   NORM_TEMP : 'LIGHT' # Normalise the spectral template library to obtain light- or mass-weighted results [LIGHT / MASS]
+  DOCLEAN : True # use pPXF clean routine which performs 3-sigma clipping based on the best-fit model [True / False]
 
 # Emission line fitting module
 GAS :
@@ -92,6 +93,7 @@ SFH :
   TEMPLATE_SET : 'miles' # options are 'miles' or 'IndoUS (not recc.)'
   LIBRARY : 'MILES/' # options are 'MILES/', 'miles_ssp_ch/', or 'IndoUS/'
   NORM_TEMP : 'LIGHT' # Normalise the spectral template library to obtain light- or mass-weighted results [LIGHT / MASS]
+  DOCLEAN : True # use pPXF clean routine which performs 3-sigma clipping based on the best-fit model [True / False]
 
 # Line strenghts module
 LS :
